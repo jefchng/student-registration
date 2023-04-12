@@ -1,5 +1,5 @@
 import { Layout } from "./Layout"
-import { StudentTable } from "./StudentTable"
+import { StudentsTable } from "./StudentsTable"
 import { Box, Spinner } from "@chakra-ui/react"
 import {
     useQuery,
@@ -12,10 +12,10 @@ export const StudentsView = () => {
 
     return (
         <Layout title="Student Records">
-            <Box bg="white" p={6} rounded="md">
+            <Box bg="white" p={6} rounded="md" minWidth={1024} w="75%" >
                 {isLoading && <Spinner color='blue.500' size='xl' />}
-                {data && <StudentTable students={data} />}
+                {data && <StudentsTable students={data} />}
             </Box>
-        </Layout>
+        </Layout >
     )
 }

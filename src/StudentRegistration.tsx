@@ -42,7 +42,6 @@ export default function StudentRegistration() {
                     onSubmit={(values, { resetForm, setSubmitting }) => {
                         setSubmitting(true)
                         mutation.mutate({ firstName: values.firstName, lastName: values.lastName, ssn: values.ssn, dob: new Date(values.dob) })
-
                         resetForm()
                     }}
                 >

@@ -7,9 +7,8 @@ type LayoutProps = {
 
 export const Layout = (props: PropsWithChildren<LayoutProps>) => {
     return (
-        <VStack bg="gray.100" align="center" justify="center" h="100vh" spacing={12}>
+        <VStack bg="gray.100" align="center" justify="center" h="100vh" spacing={12} width="full">
             <Heading as="h1" size="2xl" >{props.title}</Heading>
-
             {props.children}
         </VStack>
     )
